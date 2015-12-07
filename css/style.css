@@ -1,9 +1,22 @@
 
+body{
+  background-image:url("../Images/bk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+table tr{
+  text-align: center;
+}
+table th{
+  text-align: left;
+  padding: 5px;
+  color: #00270C;
+}
 header,footer{
   background-color: #152B4A;
   color: white;
   padding: 5px;
-  font-family: 'Martel',serif;
+  font-family: 'Lobster',sans-serif;
   font-weight: bold;
   text-align: center;
 }
@@ -30,20 +43,23 @@ aside ul a{
   color: #FFF;
   border-radius: 5px;
   margin-left: 1px;
-  white-space: nowrap;
 }
 aside ul li {
   list-style: none;
   display: inline;
-  padding: .2em 1em
+  padding: .2em 1em;
 }
 
 section{
   float: right;
   width: 81%;
+  font-family: 'Titillium Web',sans-serif;
 }
 aside{
   float: left;
+}
+section article{
+  float: right;
 }
 section,aside{
   border: 1px solid black;
