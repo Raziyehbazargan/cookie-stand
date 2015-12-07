@@ -30,6 +30,7 @@ this.render = function() {
 
     var ulEl = document.createElement('ul');
     ulEl.appendChild(document.createTextNode(this.name));
+    ulEl.textContent.className='green';
 
     for (var i = 0; i <= hours.length; i++) {
       var liEl = document.createElement('li');
