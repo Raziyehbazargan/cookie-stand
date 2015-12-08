@@ -1,0 +1,49 @@
+
+body{
+  background-image:url("../Images/bk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header{
+  color: black;
+  padding: 5px;
+  font-family: 'Lobster',sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+}
+h3{
+  text-align: center;
+}
+
+#imageHeader{
+    margin: auto;
+}
+
+.first-div {
+  width:250px;
+  height:210px;
+  float:left;
+}
+
+.second-div {
+  width:250px;
+  height:210px;
+  float:left;
+}
+
+.third-div {
+  width:250px;
+  height:210px;
+  float:left;
+}
+.forth-div {
+  width:250px;
+  height:210px;
+  float:left;
+}
+.fifth-div {
+  width:250px;
+  height:210px;
+  float:left;
+}
