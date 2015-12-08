@@ -4,68 +4,46 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
-table tr{
-  text-align: center;
-}
-table th{
-  text-align: left;
-  padding: 5px;
-  color: #00270C;
-}
-header,footer{
-  background-color: #152B4A;
-  color: white;
+header{
+  color: black;
   padding: 5px;
   font-family: 'Lobster',sans-serif;
   font-weight: bold;
   text-align: center;
+  margin: auto;
 }
-
-footer{
-   padding: 20px;
-   clear: both;
-   margin-bottom: 0px;
+h3{
+  text-align: center;
 }
 
 #imageHeader{
-  float: left;
-}
-#imgLogo{
-  float:right;
-}
-aside ul a:hover{
-  color:yellow;
-}
-aside ul a{
-  text-decoration: none;
-  padding: 5px 15px 5px 15px;;
-  background: #00270C;
-  color: #FFF;
-  border-radius: 5px;
-  margin-left: 1px;
-}
-aside ul li {
-  list-style: none;
-  display: inline;
-  padding: .2em 1em;
+    margin: auto;
 }
 
-section{
-  float: right;
-  width: 80%;
-  font-family: 'Titillium Web',sans-serif;
+.first-div {
+  width:250px;
+  height:210px;
+  float:left;
 }
-aside{
-  float: left;
+
+.second-div {
+  width:250px;
+  height:210px;
+  float:left;
 }
-section article{
-  float: right;
+
+.third-div {
+  width:250px;
+  height:210px;
+  float:left;
 }
-section,aside{
-  border: 1px solid black;
-  border-radius: 6px;
-  display: block;
-  padding: 24px 15px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+.forth-div {
+  width:250px;
+  height:210px;
+  float:left;
+}
+.fifth-div {
+  width:250px;
+  height:210px;
+  float:left;
 }
