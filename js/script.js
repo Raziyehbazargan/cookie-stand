@@ -1,6 +1,6 @@
 
 var hours = ['Total','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm'];
-var storesLoc = ['Pike Place Marcket','Alki','SeaTac Airport','SouthcenterMall','Bellevue Square']
+var storesLoc = ['Pike Place Market','Alki','SeaTac Airport','SouthcenterMall','Bellevue Square']
 var storesReports = document.getElementById('reports');
 
 // Define a object for all stores

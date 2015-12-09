@@ -82,3 +82,16 @@ nav ul li a {
 nav ul li a:hover {
 	color: #A37508;
 	}
+article{
+  margin: auto;
+  position: inherit;
+}
+fieldset{
+  float: left;
+}
+.ButtonSubmit{
+  background-color: darkblue;
+  color: white;
+  padding: 5px;
+  width: auto;
+}
