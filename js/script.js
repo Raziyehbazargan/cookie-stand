@@ -1,6 +1,6 @@
-var hours = ['10am','11am','12pm','1pm','2pm','3pm','4pm','5pm'];
-var stores = ['Pike Place Marcket','Alki','SeaTac Airport','SouthcenterMall','Bellevue Square']
-
+var hours = ['Total','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm'];
+var storesLoc = ['Pike Place Marcket','Alki','SeaTac Airport','SouthcenterMall','Bellevue Square']
+var storesReports = document.getElementById('reports');
 
 // Define a object for all stores
 var Stores = function(storeName,min,max,avgCookiePerCustomer) {
@@ -20,73 +20,78 @@ var Stores = function(storeName,min,max,avgCookiePerCustomer) {
   //define a method to produce number of cookies purchased by  random number of customerPerHour * avgCookiePerCustomer
   //and then add to a array then sum the numbers and save in DailyCookiesTotal
   Stores.prototype.cookies = function() {
-    for (var i = 0; i < hours.length; i++) {
+    for (var i = 1; i < hours.length; i++) {
       var hourlyCookies = Math.floor(this.avgCookiePerCustomer * this.customerPerHour());
       this.hourlypurchasedCookies.push(hourlyCookies);
     }
     for (var i = 0; i < this.hourlypurchasedCookies.length; i++) {
         this.dailyCookiesTotal += this.hourlypurchasedCookies[i];
       }
-};
+    };
 
 // define a method to add the results array as a list to html
   Stores.prototype.render = function() {
+    //call the function
     this.cookies();
+    var trEl = document.createElement('tr');
+    var thEl = document.createElement('th');
+    thEl.textContent = this.storeName;
 
+    trEl.appendChild(thEl);
+    //tableEl.appendChild(trEl);
+    storesReports.appendChild(trEl);
 
-    var pikePlaceLoc = document.getElementById('pikePlace');
-    var ulEl = document.createElement('ul');
-    ulEl.appendChild(document.createTextNode(this.storeName));
+    var tdEl = document.createElement("td");
+    tdEl.textContent = Math.round(this.dailyCookiesTotal);
+    trEl.appendChild(tdEl);
+    storesReports.appendChild(trEl);
 
-    for (var i = 0; i <= hours.length; i++) {
-      var liEl = document.createElement('li');
-      liEl.textContent = hours[i] + ' : ' + this.hourlypurchasedCookies[i] + '  cookies ';
-      ulEl.appendChild(liEl);
+    for(var i=0; i < this.hourlypurchasedCookies.length; i++){
+      var tdElem = document.createElement('td');
+      tdElem.textContent = this.hourlypurchasedCookies[i];
+      trEl.appendChild(tdElem);
+      storesReports.appendChild(trEl);
     }
-    liEl.textContent = ' Total: ' + this.dailyCookiesTotal + '  cookies';
-    pikePlaceLoc.appendChild(ulEl);
-  };
+  }
 
 
 
-
-
-    /*
+  function CreateTable() {
+    //get the section id that table wants to be show there
     var storesReports = document.getElementById('reports');
-    var tableEl = document.createElement('table');
 
-    for (var i = 0; i < stores.length + 1; i++) {
-    //  var rowEl = tableEl.insertRow();
-        var rowEl = document.createElement('tr');
+    //create a table
+  //  var tableEl = document.createElement('table');
+     //tableEl = document.createElement('table');
 
-        for (var j = 0; i < hours.length + 2; i++) {
-          var cellEl = document.createElement('td');
-          var cellText = document.createTextNode(this.hourlypurchasedCookies[i]);
-          cellEl.appendChild(cellText);
-          rowEl.appendChild(cellEl);
-        }
-        tableEl.appendChild(rowEl);
-        //document.body.appendChild(tableEl);
-        */
+    //create a row for  headers
+    var trEl = document.createElement('tr');
+    //tableEl.appendChild(trEl);
+    storesReports.appendChild(trEl);
+
+    var thEl = document.createElement('th');
+    thEl.textContent = 'Location';
+    trEl.appendChild(thEl);
+
+    for (var i = 0; i < hours.length; i++){
+      var thEl = document.createElement('th');
+      thEl.textContent = hours[i];
+      trEl.appendChild(thEl);}
+      //tableEl.appendChild(trEl); }
+      storesReports.appendChild(trEl);
+    }
+
+CreateTable();
+
+var pikePlaceStore = new Stores('Pike Place',17,88,5.2);
+var alkiStore = new Stores('Alki',3,24,2.6);
+var seaTacStore = new Stores('SeaTac Airport',6,44,1.2);
+var switchouthcenterStore = new Stores('SouthcenterMall',11,38,1.9);
+var bellevueSqureStore = new Stores('bellevue Square',20,48,3.3);
 
 
-
-
-
-
-
-
-var pikePlaceStore = new Stores('Pike Place Market',17,88,5.2);
-  pikePlaceStore.render();
-
-var SeaTacAirportStore = new Stores('SeaTac Airport',6,44,1.2);
-  SeaTacAirportStore.render();
-
-var SouthcenterMallStore = new Stores('South center Mall',11,38,1.9);
-    SouthcenterMallStore.render();
-
-var BellevueSquareStore = new Stores('Bellevue Square Store',20,48,33);
-    BellevueSquareStore.render();
-
-var AlkiStore = new Stores('Alki',3,24,2.6);
-    AlkiStore.render();
+pikePlaceStore.render();
+alkiStore.render();
+seaTacStore.render();
+switchouthcenterStore.render();
+bellevueSqureStore.render();

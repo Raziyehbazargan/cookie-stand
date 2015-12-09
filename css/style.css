@@ -7,7 +7,7 @@ body{
 header{
   color: black;
   padding: 5px;
-  font-family: 'Lobster',sans-serif;
+  font-family: 'Arial',sans-serif;
   font-weight: bold;
   text-align: center;
   margin: auto;
@@ -47,3 +47,38 @@ h3{
   height:210px;
   float:left;
 }
+table{
+  border-spacing: 10px;
+  border-collapse: separate;
+  border: 1px solid black;
+  margin: auto;
+
+}
+table td , table tr{
+  padding: 10px;
+}
+
+table th{
+  color: darkgreen;
+}
+nav ul {
+	margin: 0;
+	padding: 5px;
+	list-style-type: none;
+	text-align: center;
+	background-color: #05023A;
+	}
+
+nav ul li {
+	display: inline;
+	}
+
+nav ul li a {
+	text-decoration: none;
+	padding: .2em 1em;
+  color: white;
+	}
+
+nav ul li a:hover {
+	color: #A37508;
+	}
