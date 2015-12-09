@@ -102,10 +102,14 @@ function getInformation(event){
   event.preventDefault();
 
   var storeName = event.target.storename.value;
-  var min = event.target.min.value;
-  var max = event.target.max.value;
-  var avg = event.target.avg.value;
+  var min = parseInt(event.target.min.value);
+  var max = parseInt(event.target.max.value);
+  //save the decimal point with parseFloat
+  var avg = parseFloat(event.target.avg.value);
 
+
+//we can use like this
+// new Stores(storeName,min,max,avg).rendr();
   var newStore = new Stores(storeName,min,max,avg);
   newStore.render();
 
