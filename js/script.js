@@ -1,3 +1,4 @@
+
 var hours = ['Total','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm'];
 var storesLoc = ['Pike Place Marcket','Alki','SeaTac Airport','SouthcenterMall','Bellevue Square']
 var storesReports = document.getElementById('reports');
@@ -38,7 +39,6 @@ var Stores = function(storeName,min,max,avgCookiePerCustomer) {
     thEl.textContent = this.storeName;
 
     trEl.appendChild(thEl);
-    //tableEl.appendChild(trEl);
     storesReports.appendChild(trEl);
 
     var tdEl = document.createElement("td");
@@ -54,15 +54,9 @@ var Stores = function(storeName,min,max,avgCookiePerCustomer) {
     }
   }
 
-
-
   function CreateTable() {
     //get the section id that table wants to be show there
     var storesReports = document.getElementById('reports');
-
-    //create a table
-  //  var tableEl = document.createElement('table');
-     //tableEl = document.createElement('table');
 
     //create a row for  headers
     var trEl = document.createElement('tr');
@@ -77,11 +71,12 @@ var Stores = function(storeName,min,max,avgCookiePerCustomer) {
       var thEl = document.createElement('th');
       thEl.textContent = hours[i];
       trEl.appendChild(thEl);}
-      //tableEl.appendChild(trEl); }
       storesReports.appendChild(trEl);
     }
 
+//recall the function
 CreateTable();
+
 
 var pikePlaceStore = new Stores('Pike Place',17,88,5.2);
 var alkiStore = new Stores('Alki',3,24,2.6);
