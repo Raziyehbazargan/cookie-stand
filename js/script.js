@@ -83,7 +83,7 @@ var pikePlaceStore = new Stores('pikePlace',77,80,5.2);
 var alkiStore = new Stores('Alki',3,24,2.6);
 var seaTacStore = new Stores('SeaTac Airport',6,44,1.2);
 var switchouthcenterStore = new Stores('SouthcenterMall',11,38,1.9);
-var bellevueSqureStore = new Stores('bellevue Square',20,48,3.3);
+var bellevueSqureStore = new Stores('Bellevue Square',20,48,3.3);
 
 pikePlaceStore.render();
 alkiStore.render();
