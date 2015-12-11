@@ -1,7 +1,9 @@
 
 var hours = ['Total','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm'];
-var storesLoc = ['Pike Place Marcket','Alki','SeaTac Airport','SouthcenterMall','Bellevue Square']
+var storesLoc = ['Pike Place Market','Alki','SeaTac Airport','SouthcenterMall','Bellevue Square']
 var storesReports = document.getElementById('reports');
+
+
 
 // Define a object for all stores
 var Stores = function(storeName,min,max,avgCookiePerCustomer) {
@@ -77,16 +79,38 @@ var Stores = function(storeName,min,max,avgCookiePerCustomer) {
 //recall the function
 CreateTable();
 
-
-var pikePlaceStore = new Stores('Pike Place',17,88,5.2);
+var pikePlaceStore = new Stores('pikePlace',77,80,5.2);
 var alkiStore = new Stores('Alki',3,24,2.6);
 var seaTacStore = new Stores('SeaTac Airport',6,44,1.2);
 var switchouthcenterStore = new Stores('SouthcenterMall',11,38,1.9);
-var bellevueSqureStore = new Stores('bellevue Square',20,48,3.3);
-
+var bellevueSqureStore = new Stores('Bellevue Square',20,48,3.3);
 
 pikePlaceStore.render();
 alkiStore.render();
 seaTacStore.render();
 switchouthcenterStore.render();
 bellevueSqureStore.render();
+
+//get the Form Id from Html
+var formdata = document.getElementById('formdata');
+
+//define a event for submit
+formdata.addEventListener('submit', getInformation);
+
+function getInformation(event){
+  console.log(event);
+  event.preventDefault();
+
+  var storeName = event.target.storename.value;
+  var min = parseInt(event.target.min.value);
+  var max = parseInt(event.target.max.value);
+  //save the decimal point with parseFloat
+  var avg = parseFloat(event.target.avg.value);
+
+
+//we can use like this
+// new Stores(storeName,min,max,avg).rendr();
+  var newStore = new Stores(storeName,min,max,avg);
+  newStore.render();
+
+}
