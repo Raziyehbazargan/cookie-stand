@@ -11,12 +11,6 @@
 - Code
 - Tables
 - Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
-/**.row{border: 1px solid red;}
-*.columns{border: 1px dashed black;}*/
 
 
 /*Header--------------------------------------------*/
@@ -27,16 +21,13 @@
     font-family: 'Bree Serif', serif;
     vertical-align: middle;
   }
-  #logo{margin-top: 15px;
-  border-radius: 10px;}
+
   header p {
     color:#FFF100;
     text-shadow: 1px 1px 1px #000,
                3px 3px 5px white;
     font-size: 20px;
     text-align: center;
-    /*margin: 0;
-    padding: 0;*/
     }
 
   header a {
@@ -44,6 +35,11 @@
     color: white;
     justify-content: space-around;
   }
+
+  #logo {
+    margin-top: 15px;
+    border-radius: 10px;}
+
   .mystyle {
     width: 150;}
     h3{
@@ -63,14 +59,39 @@
   opacity:0.9;
 }
 
-/*Header--------------------------------------------*/
-
-.createBorder{
-  border: 1px solid black;
-  margin-bottom: 10px;
-  /*margin-left: 5px;*/
+nav{
+  justify-content:space-between;
 }
-.shadow:hover{ box-shadow: 0 0 15px #4e5d6a;}
+nav ul {
+	margin: 0;
+	padding: 5px;
+	list-style-type: none;
+	text-align: center;
+	background-color: #AC2C14;
+	}
+
+nav ul li {
+	display: inline;
+	}
+
+nav ul li a {
+	text-decoration: none;
+	padding: .2em 1em;
+  color: white;
+  align-items: flex-start;
+	}
+
+nav ul li a:hover {
+	color: #60B7F2;
+	}
+
+  nav > ul > li ul {
+  visibility: hidden;
+  position: absolute;
+  top: 105%;
+  left: 0;
+  transition: 0.2s 1s;
+}
 
 
 
@@ -137,53 +158,16 @@ article.eventBox{
   font-size: 12px;
   text-indent: 10px;
 }
-/*span{
-  font-family: 'Bangers', cursive;
-  font-size: 20px;
-}*/
 
 
-/*--------------------Store Links Css*/
-
-.blue-btn a{
-  color: white;
-  text-decoration:none;
-  text-align: center;
-  display:block;
+.createBorder{
+  border: 1px solid black;
+  margin-bottom: 10px;
 }
-.blue-btn, .first-link{
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-.blue-btn{
-  height: 42px;
-  font: normal normal 700 1em/4em Arial,sans-serif;
-  font-size: 10px;
-  overflow: hidden;
-  background-color: #3b5998;
-  margin-bottom: 1px;
-}
-.blue-btn:hover{
-   background-color: #003D99;
-}
-
-.blue-btn a:hover{
-  text-decoration: none;
-}
-
-.first-link{
-  margin-top: 0em;
-}
-
-.blue-btn:hover .first-link{
-  margin-top: -4em;
-}
+.shadow:hover{ box-shadow: 0 0 15px #4e5d6a;}
 
 
-/*------------------Gallery Zoom -->*/
+/*------------------Gallery Zoom --------------->*/
 .gallery {
   margin: 0 auto;
   padding: 5px;
@@ -215,43 +199,6 @@ article.eventBox{
 .cf:after {
   clear: both;
 }
-
-
-/*Footer--------------------------------------------*/
-footer{
-  background-color: #AfAfAf;
-  margin: 0px auto;
-  padding: 10px;
-  font-size: 10px;
-  /*justify-content: center;*/
-}
-footer ul {
-	margin: 10px;
-	/*padding: 2px;*/
-	list-style-type: none;
-	text-align: left;
-	}
-footer ul li a {
-	text-decoration: none;
-	padding: .2em 1em;
-  color: black;
-  /*align-items: flex-start;*/
-	}
-
-footer ul li a:hover {
-	color: darkblue;
-	}
-footer p {text-align: center;}
-#footer_img{margin-top: 20px}
-
-.copyright{margin-top: 30px;}
-#map{
-  /*width:200px;*/
-  height: 400px;
-
-}
-  /* Footer--------------------------------------------*/
-
 hr{
    border: 0;
    height: 1px;
@@ -282,52 +229,16 @@ table td , table tr{
 
 table th{
   color: darkgreen;
-}
-nav{
-  justify-content:space-between;
 
 }
-nav ul {
-	margin: 0;
-	padding: 5px;
-	list-style-type: none;
-	text-align: center;
-	background-color: #AC2C14;
 
-
-	}
-
-nav ul li {
-	display: inline;
-	}
-
-nav ul li a {
-	text-decoration: none;
-	padding: .2em 1em;
-  color: white;
-  align-items: flex-start;
-	}
-
-nav ul li a:hover {
-	color: #60B7F2;
-	}
-
-  nav > ul > li ul {
-  visibility: hidden;
-  position: absolute;
-  top: 105%;
-  left: 0;
-  transition: 0.2s 1s;
-}
 button.buttonHeader{
   background-color: #77E38B;
   border-radius: 5px;
   width: 100px;
 }
 
-
-
-
+ /*More and Hide Option for History paragraphs*/
 #list span,
 #list .hide,
 #list:target .show  {
@@ -343,9 +254,44 @@ button.buttonHeader{
   text-decoration: none;
   color:red;
   }
- /*@media print { .hide, .show { display: none; }*/
-}
+
 
 
 fieldset{
   border: 1px solid black;}
+
+
+/*------------Footer--------------------------------------------*/
+footer{
+  background-color: #AfAfAf;
+  margin: 0px auto;
+  padding: 10px;
+  font-size: 10px;
+  /*justify-content: center;*/
+}
+footer ul {
+	margin: 10px;
+	/*padding: 2px;*/
+	list-style-type: none;
+	text-align: left;
+	}
+footer ul li a {
+	text-decoration: none;
+	padding: .2em 1em;
+  color: black;
+  /*align-items: flex-start;*/
+	}
+
+footer ul li a:hover {
+	color: darkblue;
+	}
+footer p {text-align: center;}
+#footer_img{margin-top: 20px}
+
+.copyright{
+  margin-top: 30px;
+}
+
+#map{
+  height: 400px;
+}
