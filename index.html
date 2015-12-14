@@ -2,54 +2,245 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css"/>
-    <title>Salmon Cookies Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/style.css" charset="utf-8">
+    <link rel="stylesheet" href="./css/Skeleton.css" charset="utf-8">
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+          function initialize() {
+            var mapCanvas = document.getElementById('map');
+            var mapOptions = {
+              center: new google.maps.LatLng(44.5403, -78.5463),
+              zoom: 8,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+          }
+          google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
   </head>
+
   <body>
-    <header>
-      <h2>Salmon cookies Shop</h2>
-      <img id="imageHeader" src="./Images/salmon.png" alt="Salmon Fish">
-      <nav>
+<!-- ......................................Header .................................... -->
+    <header class="container">
+      <section class="row">
+        <!-- <article class="two columns"> -->
+            <img src="./Images/logo.png" class="two columns">
+        <!-- </article> -->
+          <p class="eight columns">Salmon cookies made with fish,<br/> salmon cookies are delish!</p>
+          <img src="./Images/salmon.png" class="two columns" id="logo"/>
+    </section>
+    <section class="row">
+      <nav class="twelve columns">
         <ul>
-	        <li><a href="index.html">Home</a></li>
-	        <li><a href="#">Reports</a></li>
-	        <li><a href="styleguide.html">Style Guide</a></li>
-	        <li><a href="#">Useful Links</a></li>
+          <li> <a href="index.html">Home</a></li>
+          <li> <a href="#history">History</a></li>
+          <li> <a href="#products">Products</a></li>
+          <li> <a href="sale.html">Reports</a></li>
+          <li> <a href="#stores">Stores</a></li>
+          <li> <a href="styleguide.html">Stylesheet </a></li>
         </ul>
       </nav>
-    </header>
-    <section>
-      <!--<h3>All Stores Reports</h3> -->
-      <br/>
-      <fieldset>
-        <br>
-        <legend> All Stores Reports </legend>
-        <form id="formdata">
-          <label for = "storeName"> Store Name:  </label>
-          <input type="text" id="storename" name="storename" placeholder="Store Name">
-          <label for="min">min:  </label>
-          <input type="number" id="min" name="min" value="10">
-          <label for="maximum">Max:  </label>
-          <input type="number" id="max" name="max" value="100">
-          <label for="avg">Average: </label>
-          <input type="text" id="avg" name="avg">
-          <input type="submit" class="ButtonSubmit" name="AddStore" value="  Add   ">
-        </form>
-      <br/>
-      <table id="reports"></table>
-      <br/>
-    </fieldset>
     </section>
+    </header>
 
 
-      <div class="first-div" id="pikePlace"></div>
-      <div class="second-div" id="Alki"></div>
-      <div class="third-div" id="SeaTac"></div>
-      <div class="forth-div" id="southcenter"></div>
-      <div class="fifth-div" id="bellevue"></div>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <!-- ......................................Main  .................................... -->
+    <main class="container">
+      <!-- ...............................row1:FamilyPicture............................ -->
+      <section class="row">
+        <img src="Images/familyLogo.jpg" alt=""  class="twelve columns"/>
+      </section>
+
+      <section class="row">
+        <article class="tweleve columns header-main" id="histoty">Pat's Salmon Cookie History</article>
+      </section>
+
+      <!-- ...............................row2:History............................ -->
+
+      <section class="row">
+        <article class="seven columns">
+          <div class="text-history">
+            <p class="textstyle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <span id="list"><a href="#list" class="show">more ...</a>
+            <span> <a href="#" class="hide"> hide </a>
+            <br/>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+          </span>
+        </span>
+      </p>
+          </div>
+          </article>
+            <img  class="four columns offset-by-one" src="./Images/allFishh.jpg" alt="" />
+       </section>
+       <br/>
+
+
+       <!-- ...............................row3:Products............................ -->
+
+       <section class="row">
+         <article class="tweleve columns header-main" id="products">Our Products</article>
+       </section>
+
+        <section class="row">
+          <div class="gallery cf">
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh1.jpg" alt="" title="Men Shirt"/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh8.jpg" alt=""/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh3.jpg" alt=""/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh1.jpg" alt="" title="Men Shirt"/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh8.jpg" alt=""/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh3.jpg" alt=""/>
+            </div>
+          </div>
+        </section>
+
+        <section class="row">
+          <div class="gallery cf">
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh4.jpg" alt="" title="Men Shirt"/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh8.jpg" alt=""/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh5.jpg" alt=""/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh1.jpg" alt="" title="Men Shirt"/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh6.jpg" alt=""/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh4.jpg" alt=""/>
+            </div>
+          </div>
+        </section>
+
+        <section class="row">
+          <div class="gallery cf">
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh1.jpg" alt="" title="Men Shirt"/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh6.jpg" alt=""/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh3.jpg" alt=""/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh4.jpg" alt="" title="Men Shirt"/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh8.jpg" alt=""/>
+            </div>
+            <div class="two columns">
+              <img class="createBorder shadow" src="./Images/sh3.jpg" alt=""/>
+            </div>
+          </div>
+        </section>
+      <br/>
+
+      <!-- ...............................row4:Stores............................ -->
+      <section class="row">
+        <article class="tweleve columns header-main"> Our Stores & Hours</article>
+      </section>
+
+    <section class="row">
+      <article class="three columns">
+        <ul class="StoreLists">
+          <li>
+            <a>Pike Place Market</a><br/>
+            <img src="./Images/hours.png"><span>8AM-11PM</span><br/>
+            <img src="./Images/address-icon.png"><span> 11000 NE, 4<sup>th</sup> street, Bellevue, WA.</span><br/>
+            <img src="./Images/tel.png"><span> (425)-111-000</span>
+          </li>
+
+          <li>
+            <a>Bellevue square</a><br/>
+            <img src="./Images/hours.png"><span>8AM-11PM</span><br/>
+            <img src="./Images/address-icon.png"><span style="font-size:10px;"> 11000 NE, 4<sup>th</sup> street, Bellevue, WA.</span><br/>
+            <img src="./Images/tel.png"><span style="font-size:10px;"> (425)-111-000</span>
+          </li>
+
+          <li>
+            <a>Alki</a><br/>
+            <img src="./Images/hours.png"><span>8AM-11PM</span><br/>
+            <img src="./Images/address-icon.png"><span style="font-size:10px;"> 11000 NE, 4<sup>th</sup> street, Bellevue, WA.</span><br/>
+            <img src="./Images/tel.png"><span style="font-size:10px;"> (425)-111-000</span>
+          </li>
+
+          <li>
+            <a>SeaTac Airport</a><br/>
+            <img src="./Images/hours.png"><span>8AM-11PM</span><br/>
+            <img src="./Images/address-icon.png"><span style="font-size:10px;"> 11000 NE, 4<sup>th</sup> street, Bellevue, WA.</span><br/>
+            <img src="./Images/tel.png"><span style="font-size:10px;"> (425)-111-000</span>
+          </li>
+
+          <li>
+            <a>Southcenter Mall</a><br/>
+            <img src="./Images/hours.png"><span>8AM-11PM</span><br/>
+            <img src="./Images/address-icon.png"><span style="font-size:10px;"> 11000 NE, 4<sup>th</sup> street, Bellevue, WA.</span><br/>
+            <img src="./Images/tel.png"><span style="font-size:10px;"> (425)-111-000</span>
+          </li>
+        </ul>
+      </article>
+    <div class="nine columns">
+      <div id="map"></div>
+    </section>
+    <br/>
+ </main>
+
+ <!-- ......................................Footer .................................... -->
+  <footer class="container" id="footer">
+    <section class="row">
+      <article class="three columns">
+          <ul class="footerList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="sale.html">Reports</a></li>
+            <!-- <li><a href="#stores">Our Stores</a></li>
+            <li><a href="stylesheet.html">StyleSheet</a></li> -->
+          </ul>
+        </article>
+        <article class="four columns">
+          <ul class="footerList">
+            <li><a href="http://www.salmondays.org">Salmon Events</a></li>
+            <li><a href="http://www.visitbellevuewashington.com/events/">Bellevuw events</a></li>
+            <li><a href="#">Seatle Events</a></li>
+          </ul>
+        </article>
+
+      <article class="three columns offset-by-two">
+        <a href="#" title="facebook"><img src="./Images/Icons/facebook.png" id="footer_img"/></a>
+        <a href="#" title="GooglePlus"><img src="./Images/Icons/googleplus.png" id="footer_img"/></a>
+        <a href="#" title="Instagram"><img src="./Images/Icons/instagram.png" id="footer_img"/></a>
+        <a href="#" title="Linkedin"><img src="./Images/Icons/linkedIN.png" id="footer_img"/></a>
+        <a href="#" title="RSS"><img src="./Images/Icons/rss-feed.png" id="footer_img"/></a>
+      </article>
+    </section>
+    <section class="twelve columns  copyright">
+      <p> &copy Copyright 2015 Salmon Cookies </p>
+    </section>
+    </footer>
   </body>
 </html>
