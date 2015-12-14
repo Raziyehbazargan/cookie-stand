@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/style.css" charset="utf-8">
+    <link rel="stylesheet" href="./css/Skeleton.css" charset="utf-8">
+  </head>
+
+  <body>
+    <header class="container">
+      <section class="row">
+        <article class="two columns">
+            <img src="./Images/logo.png">
+        </article>
+          <p class="eight columns">Salmon cookies made with fish,<br/> salmon cookies are delish!</p>
+          <img src="./Images/salmon.png" class="two columns" id="logo"/>
+    </section>
+    <section class="row">
+      <nav class="twelve columns">
+        <ul>
+          <li> <a href="index.html">Home</a></li>
+          <li> <a href="#history">History</a></li>
+          <li> <a href="#products">Products</a></li>
+          <li> <a href="#events">Events</a></li>
+          <li> <a href="#stores">Stores</a></li>
+          <li> <a href="styleguide.html">Stylesheet </a></li>
+        </ul>
+      </nav>
+    </section>
+    </header>
+  <br/>
+  <main class="container">
+    <section class="row">
+      <article class="twelve columns">
+      <fieldset >
+        <legend> All Stores Reports </legend>
+        <form id="formdata">
+          <!-- <label for = "storeName" class="two columns"> Store Name:  </label> -->
+          <input type="text" class="four columns" id="storename" name="storename" placeholder="Store Name">
+
+          <!-- <label for="min" class="one columns">min:  </label> -->
+          <input type="number" class="two columns" id="min" name="min" value="10" title="Minimun">
+
+          <!-- <label for="maximum" class="one columns">Max:  </label> -->
+          <input type="number" class="two columns" id="max" name="max" value="100" title="Maximum">
+
+          <!-- <label for="avg" class="two columns">Average: </label> -->
+          <input type="text" class="two columns" id="avg" name="avg" placeholder="average number">
+
+          <input type="submit" class="ButtonSubmit" name="AddStore" value="Add" class="two columns">
+        </form>
+    </fieldset>
+  </article>
+</section>
+<section class="row">
+  <article class="nine columns offset-by-one">
+    <table id="reports"></table>
+  </article>
+
+</section>
+</main>
+
+
+<!-- ......................................Footer .................................... -->
+ <footer class="container" id="footer">
+   <section class="row">
+     <article class="three columns">
+         <ul class="footerList">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="#history">History</a></li>
+           <li><a href="#products">Products</a></li>
+           <li><a href="sale.html">Reports</a></li>
+           <li><a href="#stores">Our Stores</a></li>
+           <li><a href="stylesheet.html">StyleSheet</a></li>
+         </ul>
+       </article>
+       <article class="four columns">
+         <ul class="footerList">
+           <li><a href="http://www.salmondays.org">Salmon Events</a></li>
+           <li><a href="http://www.visitbellevuewashington.com/events/">Bellevuw events</a></li>
+           <li><a href="#">Seatle Events</a></li>
+         </ul>
+       </article>
+
+     <article class="three columns offset-by-three">
+       <a href="#" title="facebook"><img src="./Images/Icons/facebook.png" id="footer_img"/></a>
+       <a href="#" title="GooglePlus"><img src="./Images/Icons/googleplus.png" id="footer_img"/></a>
+       <a href="#" title="Instagram"><img src="./Images/Icons/instagram.png" id="footer_img"/></a>
+       <a href="#" title="Linkedin"><img src="./Images/Icons/linkedIN.png" id="footer_img"/></a>
+       <a href="#" title="RSS"><img src="./Images/Icons/rss-feed.png" id="footer_img"/></a>
+     </article>
+   </section>
+   <section class="twelve columns  copyright">
+     <p> &copy Copyright 2015 Ristorante Con Fusion</p>
+   </section>
+   </footer>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
